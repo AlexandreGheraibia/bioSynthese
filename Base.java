@@ -26,6 +26,21 @@ public enum Base {
         }
         return select;
     }
+    public boolean isAdenine(){
+        return this==A;
+    }
+    public boolean isCytosine(){
+        return this==C;
+    }
+    public boolean isGuamine(){
+        return this==G;
+    }
+    public boolean isThymine(){
+        return this==T;
+    }
+    public boolean isUracile(){
+        return this==U;
+    }
 
     public String toString(){
 
