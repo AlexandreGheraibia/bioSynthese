@@ -1,7 +1,7 @@
 package génétique;
 
 public enum Base {
-
+//
     A("adénine"),C("cytosine"),G("guamine"),T("thymine"),U("uracile");
     private String symbolName;
     //Constructeur
