@@ -29,7 +29,7 @@ public class Arn {
                                               // La limite de i est part(i/3)*3
                                               //soit le nombre de groupe multiplier par le nombre d'élément d'un groupe
             //                                //=nombre d'element total à parcourir
-                                              // et  j sur i%3 en placement de l'element i dans un groupe de 3
+                                              // et  j sur [i%3 à 2] position relative de l'element i dans un groupe de 3
 
             //l'acidde amine ne se génére pas lui même
             proteine.add(generateAcideAmine(codons));
