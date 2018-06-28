@@ -3,14 +3,14 @@ package génétique;
 public class Base {
 
     private String name;
-    private Symbol symbol;
+    private String symbol;
     private String family;
     //Constructeur
     Base(String symbol){
         initBaseElement(symbol);
     }
     private void initBaseElement(String symbol){
-        this.symbol=new Symbol(symbol);
+        this.symbol=symbol;
         switch(symbol){
 
             case "A":
@@ -39,9 +39,9 @@ public class Base {
         }
 
     }
-    public Base compl(){
+    public Base compl(){//manque le isArn
         Base select=new Base("C");
-        switch(this.symbol.toString()){
+        switch(this.symbol){
             case "A":
                 select= new Base("T");;
                 break;
@@ -56,19 +56,19 @@ public class Base {
         return select;
     }
     public boolean isAdenine(){
-        return this.symbol.toString().equals("A");
+        return this.symbol.equals("A");
     }
     public boolean isCytosine(){
-        return this.symbol.toString().equals("C");
+        return this.equals("C");
     }
     public boolean isGuamine(){
-        return this.symbol.toString().equals("G");
+        return this.equals("G");
     }
     public boolean isThymine(){
-        return this.symbol.toString().equals("T");
+        return this.equals("T");
     }
     public boolean isUracile(){
-        return this.symbol.toString().equals("U");
+        return this.equals("U");
     }
 
     public String toString(){

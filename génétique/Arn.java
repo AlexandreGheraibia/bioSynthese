@@ -18,7 +18,7 @@ public class Arn {
     public ArrayList<AcideAmine> translate(){
 
         ArrayList<AcideAmine>proteine=new ArrayList<AcideAmine>();
-        //combien de fis je vais faire la boucle
+        //combien de groupe de 3 contenu dans le brin
         int max=strand.size()/3;
         for(int i=0;i<max;i++){
             ArrayList<Base>codons=new ArrayList<Base>();

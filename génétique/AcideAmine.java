@@ -4,7 +4,7 @@ import java.util.ArrayList;
 //est une nouvelle base?
 public class AcideAmine {
     String symbol;
-    //SymbolAcideAmine symbol
+    //String symbol
     //String name
     //String family
     AcideAmine(String symb){
