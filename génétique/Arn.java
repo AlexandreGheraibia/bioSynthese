@@ -18,13 +18,20 @@ public class Arn {
     public ArrayList<AcideAmine> translate(){
 
         ArrayList<AcideAmine>proteine=new ArrayList<AcideAmine>();
-        //combien de groupe de 3 contenu dans le brin
-        int max=strand.size()/3;
-        for(int i=0;i<max;i++){
+        //combien de groupe de 3 sont contenus dans le brin
+        int nbGroup=strand.size()/3;
+        for(int i=0;i<nbGroup;i++){
             ArrayList<Base>codons=new ArrayList<Base>();
+
             for(int j=0;j<3;j++){
-                codons.add(strand.get(i*3+j));
-            }
+                codons.add(strand.get(i*3+j));//les cases sont de la forme 3i+reste de 3
+            }                                 //autre soluce faire courir i sur 0..n avec un pas de 3
+                                              // La limite de i est part(i/3)*3
+                                              //soit le nombre de groupe multiplier par le nombre d'élément d'un groupe
+            //                                //=nombre d'element total à parcourir
+                                              // et  j sur i%3 en placement de l'element i dans un groupe de 3
+
+            //l'acidde amine ne se génére pas lui même
             proteine.add(generateAcideAmine(codons));
 
         }
